@@ -1,47 +1,52 @@
 <template>
-	<view class="box">
-		<view class=" a">
-			<view class="a-t left">
-				<view class="a-t-l">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="#icon-yi"></use>
-					</svg>
+	<view class="con">
+		<view class="box">
+			<view class="l"></view>
+			<view class="r"></view>
+			<view class=" a">
+				<view class="a-t left">
+					<view class="a-t-l">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-yi"></use>
+						</svg>
+					</view>
+					<view class="a-t-r left">
+						<view v-for="(item,index) in yi" :key="index">{{item}}</view>
+					</view>
 				</view>
-				<view class="a-t-r left">
-					<view v-for="(item,index) in yi" :key="index">{{item}}</view>
+				<view class="a-b left">
+					<view class="a-b-l">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-ji"></use>
+						</svg>
+					</view>
+					<view class="a-b-r left">
+						<view v-for="(item,index) in ji" :key="index">{{item}}</view>
+					</view>
 				</view>
 			</view>
-			<view class="a-b left">
-				<view class="a-b-l">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="#icon-ji"></use>
-					</svg>
-				</view>
-				<view class="a-b-r left">
-					<view v-for="(item,index) in ji" :key="index">{{item}}</view>
-				</view>
+			<view class="b center">
+				<view>{{yangli}}</view>
+				<view>{{yingli}}</view>
 			</view>
-		</view>
-		<view class="b center">
-			<view>{{yangli}}</view>
-			<view>{{yingli}}</view>
-		</view>
-		<view class="c between">
-			<view class="left">{{chong}}</view>
-			<view class="left">{{sha}}</view>
-			<view class="left">{{wuxing}}</view>
-		</view>
-		<view class="d center">
-			<view>{{caishen}}</view>
-			<view>{{xishen}}</view>
-			<view>{{fushen}}</view>
-		</view>
-		<view class="e">
-			<view class="left">{{suici}}</view>
-			<view class="left">{{xiongshen}}</view>
-			<view class="left">{{jishenyiqu}}</view>
+			<view class="c between">
+				<view class="left">{{chong}}</view>
+				<view class="left">{{sha}}</view>
+				<view class="left">{{wuxing}}</view>
+			</view>
+			<view class="d center">
+				<view>{{caishen}}</view>
+				<view>{{xishen}}</view>
+				<view>{{fushen}}</view>
+			</view>
+			<view class="e">
+				<view class="left">{{suici}}</view>
+				<view class="left">{{xiongshen}}</view>
+				<view class="left">{{jishenyiqu}}</view>
+			</view>
 		</view>
 	</view>
+
 </template>
 
 <script>
@@ -107,24 +112,54 @@
 </script>
 
 <style lang="scss">
+	.con {
+		overflow: hidden;
+		background-image: linear-gradient(#ffb300, #f5cd71);
+	}
+
+
+
 	.box {
 		box-sizing: border-box;
+		margin: 30rpx;
 		padding: 30rpx;
 		font-size: 28rpx;
-		background-color: #e8e7e7;
+		background-color: #fff;
+		position: relative;
+		border-radius: 10rpx;
+	}
+
+	.l,
+	.r {
+		border: 4rpx solid #fff;
+		position: absolute;
+		width: 10rpx;
+		height: 30rpx;
+		background-color: #fff;
+		border-radius: 10rpx;
+		top: -15rpx;
+	}
+
+	.l {
+		left: 100rpx;
+	}
+
+	.r {
+		right: 100rpx;
+
 	}
 
 	.a>view {
 		padding: 20rpx;
+		border-radius: 10rpx;
+		background: #ece7e7;
 	}
 
 	.a-t {
-		background: #e2e2e2;
 		color: #1ec509;
 	}
 
 	.a-b {
-		background: #e2e2e2;
 		color: red;
 		margin-top: 20rpx;
 	}
@@ -141,6 +176,7 @@
 		flex: 1;
 		display: flex;
 		flex-wrap: wrap;
+		font-size: 32rpx;
 	}
 
 	.a-t-r view,
@@ -150,6 +186,7 @@
 
 	.b {
 		margin-top: 20rpx;
+		border-bottom: 2rpx solid #ccc;
 	}
 
 	.b>view {
@@ -158,15 +195,17 @@
 		align-items: center;
 		padding: 20rpx;
 		border-radius: 10rpx;
-		// background-color: #e4e4e4;
 	}
 
 	.b>view:first-child:before,
 	.b>view:last-child:before {
 		color: red;
+		font-size: 32rpx;
 		font-weight: bold;
 		margin-bottom: 10rpx;
 	}
+
+
 
 	.b>view:last-child {
 		margin-left: 40rpx;
@@ -188,6 +227,7 @@
 	.c>view:nth-child(2):before,
 	.c>view:last-child:before {
 		margin-right: 20rpx;
+		font-size: 32rpx;
 		font-weight: bold;
 		color: red;
 	}
@@ -213,6 +253,8 @@
 		flex-direction: column;
 		align-items: center;
 		margin: 20rpx;
+		padding-bottom: 6rpx;
+		border-bottom:6rpx solid red ;
 	}
 
 	.d>view:first-child:before,
@@ -220,6 +262,7 @@
 	.d>view:last-child:before {
 		font-weight: bold;
 		color: red;
+		font-size: 32rpx;
 	}
 
 	.d>view:first-child:before {
@@ -243,6 +286,7 @@
 	.e>view:nth-child(2):before,
 	.e>view:nth-child(3):before {
 		font-weight: bold;
+		font-size: 32rpx;
 		color: red;
 		margin-right: 20rpx;
 	}

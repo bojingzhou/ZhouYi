@@ -1,2 +1,2 @@
-let url="http://localhost/api/test";
+let url="http://www.xuxiaomiao.com/api/test";
 export {url}
