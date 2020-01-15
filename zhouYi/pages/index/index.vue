@@ -6,9 +6,7 @@
 			<view class=" a">
 				<view class="a-t left">
 					<view class="a-t-l">
-						<svg class="icon" aria-hidden="true">
-							<use xlink:href="#icon-yi"></use>
-						</svg>
+						<i class=" t-icon t-icon-yi"></i>
 					</view>
 					<view class="a-t-r left">
 						<view v-for="(item,index) in yi" :key="index">{{item}}</view>
@@ -16,9 +14,7 @@
 				</view>
 				<view class="a-b left">
 					<view class="a-b-l">
-						<svg class="icon" aria-hidden="true">
-							<use xlink:href="#icon-ji"></use>
-						</svg>
+						<i class=" t-icon t-icon-ji"></i>
 					</view>
 					<view class="a-b-r left">
 						<view v-for="(item,index) in ji" :key="index">{{item}}</view>

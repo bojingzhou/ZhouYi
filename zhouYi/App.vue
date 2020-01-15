@@ -13,6 +13,7 @@
 </script>
 
 <style lang="scss">
-	@import './static/css/common.scss'
-	/*每个页面公共css */
+	@import './static/css/common.scss';
+	@import './static/css/iconfont.scss';
+	
 </style>
