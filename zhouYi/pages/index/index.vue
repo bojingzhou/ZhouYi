@@ -1,5 +1,6 @@
 <template>
 	<view class="con">
+		<ZhouYiNav bac="#ffb300" title="运势"></ZhouYiNav>
 		<view class="box">
 			<view class="l"></view>
 			<view class="r"></view>
@@ -46,10 +47,14 @@
 </template>
 
 <script>
+	import ZhouYiNav from '../../components/ZhouYiNav';
 	import {
 		url
 	} from '../../common/config.js'
 	export default {
+		components: {
+			ZhouYiNav
+		},
 		data() {
 			return {
 				yi: "",

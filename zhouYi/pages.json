@@ -1,9 +1,17 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/news/news",
+			"style": {
+				"navigationBarTitleText": "易友圈",
+				"navigationStyle":"custom"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "运势"
+				"navigationBarTitleText": "运势",
+				"navigationStyle":"custom"
 			}
 		}
 	],
@@ -19,30 +27,21 @@
 		"selectedColor": "#3cc51f",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
-		"fontSize": "30px",
+		"fontSize": "24px",
 		"list": [{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/image/icon_component.png",
-				"selectedIconPath": "static/image/icon_component_HL.png",
-				"text": "首页"
+				"pagePath": "pages/news/news",
+				"iconPath": "static/logo.png",
+				"selectedIconPath": "static/logo.png",
+				"text": "讯息"
 			},
 			{
 				"pagePath": "pages/index/index",
-				"iconPath": "static/image/icon_component.png",
-				"selectedIconPath": "static/image/icon_component_HL.png",
-				"text": "首页"
-			},
-			{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/image/icon_component.png",
-				"selectedIconPath": "static/image/icon_component_HL.png",
-				"text": "首页"
-			}, {
-				"pagePath": "pages/index/index",
-				"iconPath": "static/image/icon_component.png",
-				"selectedIconPath": "static/image/icon_component_HL.png",
+				"iconPath": "static/logo.png",
+				"selectedIconPath": "static/logo.png",
 				"text": "首页"
 			}
+
+
 		]
 	}
 }
